@@ -14,11 +14,11 @@ export const HospitalProvider = ({ children }) => {
   if (hospitals.length === 0) {
     axios.get("https://bb131e85a12f.ngrok-free.app/api/hospitals")
       .then(res => {
-        console.log("API Response:", res.data.data); // ✅ ADD THIS
-        if (res.data.data.status === "success") {
-          setHospitals(res.data.data);
+        console.log("API Response:", res.data); // ✅ ADD THIS
+        if (res.data.status === "success") {
+          setHospitals(res.data);
         } else {
-          console.warn("Unexpected API status:", res.data.data.status);
+          console.warn("Unexpected API status:", res.data.status);
         }
         setLoading(false);
       })
