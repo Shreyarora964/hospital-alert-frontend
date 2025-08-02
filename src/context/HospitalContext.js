@@ -16,7 +16,7 @@ export const HospitalProvider = ({ children }) => {
       .then(res => {
         console.log("API Response:", res.data); // ✅ ADD THIS
         if (res.data.status === "success") {
-          setHospitals(res.data);
+          setHospitals(res.data.data);
         } else {
           console.warn("Unexpected API status:", res.data.status);
         }
