@@ -12,7 +12,11 @@ export const HospitalProvider = ({ children }) => {
   useEffect(() => {
   console.log("Fetching hospital data...");
   if (hospitals.length === 0) {
-    axios.get("https://bb131e85a12f.ngrok-free.app/api/hospitals")
+    axios.get("https://bb131e85a12f.ngrok-free.app/api/hospitals" , {
+      headers: {
+        "ngrok-skip-browser-warning": "true"
+      }
+    })
       .then(res => {
         console.log("API Response:", res.data); // ✅ ADD THIS
         if (res.data.status === "success") {
