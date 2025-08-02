@@ -189,7 +189,7 @@ const AlertForm = ({ hospitalId }) => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/alerts', {
+      await axios.post('https://617116c21f48.ngrok-free.app/api/alerts', {
         name,
         email,
         location,
