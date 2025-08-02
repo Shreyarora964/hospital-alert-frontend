@@ -11,7 +11,7 @@ export const HospitalProvider = ({ children }) => {
 
   useEffect(() => {
     if (hospitals.length === 0) {
-      axios.get("http://hospital-alert-backend.onrender.com/api/hospitals")
+      axios.get("https://abc123.ngrok.io/api/hospitals")
         .then(res => {
           if (res.data.status === "success") {
             setHospitals(res.data.data);
