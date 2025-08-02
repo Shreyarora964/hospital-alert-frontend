@@ -11,7 +11,7 @@ export const HospitalProvider = ({ children }) => {
 
   useEffect(() => {
     if (hospitals.length === 0) {
-      axios.get("https://abc123.ngrok.io/api/hospitals")
+      axios.get("https://ace7f9e73c1d.ngrok-free.app/api/hospitals")
         .then(res => {
           if (res.data.status === "success") {
             setHospitals(res.data.data);
